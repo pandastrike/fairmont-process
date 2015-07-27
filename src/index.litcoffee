@@ -1,6 +1,6 @@
-# Utility Functions
+# Process Functions
 
-These should probably all go somewhere else. For the moment, this is a holding pen of sorts for functions that we're not sure what to do with.
+These functions handle Unix processes.
 
 ## abort
 
