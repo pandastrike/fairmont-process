@@ -3,8 +3,10 @@ Amen = require "amen"
 
 Amen.describe "Process functions", (context) ->
 
-  {abort, shell} = require "../src"
+  {shell, abort} = require "../src"
 
-  context.test "abort"
-  context.test "shell", ->
-    assert (yield shell "ls ./test").stdout.trim?
+   context.test "shell", ->
+    assert (yield shell "ls").stdout.trim?
+
+   context.test "abort", ->
+     assert abort "Process stopped."
