@@ -1,6 +1,6 @@
 {
   "name": "fairmont-process",
-  "version": "1.0.0-beta-19",
+  "version": "1.0.0",
   "description": "A collection of useful functions and utilities.",
   "files": [
     "src/",
@@ -9,11 +9,10 @@
   ],
   "main": "lib/index.js",
   "scripts": {
-    "prepublish": "coffee --nodejs --harmony -o lib/ -c src/*.*coffee",
-    "test": "coffee --nodejs --harmony test/index.coffee",
-    "watch": "coffee --nodejs --harmony -o lib/ -cw src/*.*coffee",
-    "version": "(node_modules/.bin/json -f package.json version > VERSION)",
-    "tag": "(cat VERSION | xargs -I version git tag -am version version) && git push --tags"
+    "test": "coffee test/index.coffee",
+    "watch": "coffee -o lib/ -cw src/*.*coffee",
+    "prepublish": "coffee -o lib/ -c src/*.*coffee",
+    "postpublish": "(node_modules/.bin/json -f package.json version | xargs -I version git tag -am version version) && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -32,5 +31,5 @@
   "dependencies": {
     "when": "^3.7.3"
   },
-  "engine": "node >= 0.12.x"
+  "engine": "node >= 4.0.x"
 }
