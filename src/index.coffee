@@ -3,7 +3,7 @@ abort = (message) ->
   process.exit -1
 
 shell = (command) ->
-  {promise} = require "when"
+  {promise} = require "fairmont-helpers"
   {exec} = require "child_process"
   promise (resolve, reject) ->
     exec command, (error, stdout, stderr) ->

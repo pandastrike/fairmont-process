@@ -1,6 +1,6 @@
 {
   "name": "fairmont-process",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A collection of useful functions and utilities.",
   "files": [
     "src/",
@@ -24,12 +24,12 @@
   ],
   "license": "ISC",
   "devDependencies": {
-    "amen": "^1.0.0-alpha-03",
-    "coffee-script": "~1.9.3",
+    "amen": "1.0.x",
+    "coffee-script": "^1.10.0",
     "json": "^9.0.3"
   },
   "dependencies": {
-    "when": "^3.7.3"
+    "fairmont-helpers": "^1.1.1"
   },
-  "engine": "node >= 4.0.x"
+  "engine": "node >= 6.0.x"
 }
